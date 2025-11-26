@@ -36,6 +36,7 @@ public class Plant {
     //zalivanje
     public void waterPlant() {
         water += 10;
+        if (water > 100) water = 100;
         happiness += 2;
         checkHealth();
     }
@@ -43,6 +44,7 @@ public class Plant {
     //sončenje
     public void giveSun() {
         sun += 10;
+        if (sun > 100) sun = 100;
         happiness += 2;
         checkHealth();
     }
@@ -60,5 +62,6 @@ public class Plant {
         //da ni funny numbers
         if (health > 100) health = 100;
         if (health < 0) health = 0;
+        if (happiness > 100) happiness = 100;
     }
 }
