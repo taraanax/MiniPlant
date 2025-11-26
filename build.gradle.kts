@@ -17,7 +17,7 @@ javafx {
 }
 
 application {
-    mainClass.set("Main")
+    mainClass.set("org.example.Main")
 }
 
 dependencies {
