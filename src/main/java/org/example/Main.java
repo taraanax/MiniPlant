@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    //nova rastlina
     private Plant plant;
 
     private Label statsLabel;
@@ -20,6 +21,7 @@ public class Main extends Application {
 
         statsLabel = new Label(updateStatsText());
 
+        //gumbi
         Button waterButton = new Button("Water");
         waterButton.setOnAction(e -> {
             plant.waterPlant();
@@ -34,6 +36,7 @@ public class Main extends Application {
 
         HBox buttonBox = new HBox(10, waterButton, sunButton);
 
+        //layout
         BorderPane root = new BorderPane();
         root.setCenter(statsLabel);
         root.setBottom(buttonBox);
@@ -45,6 +48,7 @@ public class Main extends Application {
         stage.show();
     }
 
+    //updejtanje texta
     private String updateStatsText() {
         return "Health: " + plant.getHealth() +
                 "\nWater: " + plant.getWater() +
